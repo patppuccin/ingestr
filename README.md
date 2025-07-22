@@ -1,8 +1,9 @@
-# ingestr
+# snaglr
 File ingestion tool for hoarders and archivers
 
 CLI structure
 
+```txt
 ingestr
 ├── --help
 ├── --version
@@ -21,3 +22,4 @@ ingestr
     ├── --dest, -d string           # destination folder
     ├── --force, -f                 # force overwrite if file exists
     └── --dry-run                   # preview only, do not write
+```
