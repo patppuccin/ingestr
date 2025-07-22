@@ -1,0 +1,52 @@
+#
+
+# One or more input folders to scan
+input:
+  - ~/Pictures/dump
+  - ~/Downloads/images
+
+# Destination folder for ingested files
+dest: ~/Pictures/ingested
+
+# Recursively scan input folders
+recurse: true
+
+# Move files instead of copying (default is copy)
+move: false
+
+# Allowed file extensions (case-insensitive)
+allow_ext:
+  - jpg
+  - png
+  - webp
+
+# Optional: ignore files matching this pattern (regex)
+deny_pattern: "_temp|_thumb"
+
+# Max file size in MB (files above this are skipped)
+max_size: 50
+
+# Preset to apply for export/conversion
+preset: thumb256
+
+# Force overwrite if file already exists in destination
+force: false
+
+# Logging level: info, debug, error
+log_level: info
+
+# Log only to file (disable stdout output)
+quiet: false
+
+presets:
+  thumb256:
+    width: 256
+    height: 256
+    format: jpeg
+    crop: true
+
+  archive_max:
+    width: 1920
+    height: 1080
+    format: webp
+    quality: 80
